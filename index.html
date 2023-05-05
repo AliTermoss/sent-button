@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+
+
+<div class="first">
+    <img src="1.png" alt="">
+    <span>Send</span>
+</div>
+
+<div class="correct"><img src="3.png" style="width: 30px;"></div>
+<div class="circle"></div>
+</body>
+<script>
+    let Fir=document.querySelector('.first');
+    let Sent=document.querySelector('.first span');
+    let Icon=document.querySelector('.first img');
+    let Cor=document.querySelector('.correct');
+    let Icon1=document.querySelector('.tele');
+    let Cir=document.querySelector('.circle');
+
+    Fir.addEventListener('click', function(e){
+        e.preventDefault;
+        Sent.textContent='Sent!';
+        Sent.style.animationName='one';
+        Sent.style.animationDuration='6s';
+        
+        Fir.style.animationName='two';
+        Fir.style.width='100px';
+        Fir.style.animationDuration='6s';
+        
+        Icon.style.visibility='hidden';
+        Cor.style.animationDuration='6s';
+        Cor.style.animationName='three';
+        Cor.style.visibility='visible';
+   
+        Cor.style.transform= 'translate(-65px,-51px)';
+        Cor.style.background='rgb(218, 198, 198)';
+        Cor.style.borderRadius='50%';
+        Cor.style.padding='12px 12px 6px 12px';
+        Cor.style.border='2px solid gray';
+        Cor.style.padding='12px 12px 6px 12px';
+        Cor.style.border='2px solid gray';
+        Cir.style.animationDuration='6s';
+        Cir.style.animationName='four';
+        
+    })
+
+    Cor.addEventListener('click',function(e){
+        e.preventDefault;
+        Sent.textContent='Send';
+        Cor.style.visibility='hidden';
+        Cor.style.transition='1ms';
+        Cor.style.transform= 'translate(0px,0px)';
+        Fir.style.width='120px';
+        Icon.style.visibility='visible';
+    })
+</script>
+</html>

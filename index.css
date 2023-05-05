@@ -1,0 +1,121 @@
+body{
+    background-color: rgb(5, 4, 95);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.first{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(218, 198, 198);
+    height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+.first img{
+width: 30px;
+object-fit: contain;
+transform: rotate(-10deg);
+}
+
+.first span{
+    font-size: 17px;
+    font-weight: 700;
+    color: rgb(4, 4, 134);
+    
+}
+
+.first:hover{
+    cursor: grab;
+}
+
+
+.tele img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transform: rotate(-10deg);
+    
+}
+.correct{
+    visibility: hidden;
+
+}
+
+.correct:hover{
+    cursor: grab;
+}
+
+@keyframes one{
+0%, 70%{
+    visibility: hidden;
+    
+    
+}
+80%{
+    visibility: visible;
+    transform: translateX(0px);
+}
+}
+
+@keyframes two{
+    10%, 70%{
+        width: 10px;
+        height: 40px;
+        border-radius: 50%;
+        
+        
+    }
+    80%{
+        width: 100px;
+        height: 45px;
+        border-radius: 10px;
+        
+    }
+}
+
+@keyframes three{
+    0%, 70%{
+        visibility: hidden;
+        
+        
+    }
+    80%{
+        visibility: visible;
+        
+    }
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px dashed white;
+    position: relative;
+    top: -106px;
+    
+    visibility: hidden;
+}
+
+@keyframes four{
+    0%{
+        visibility: visible;
+    }
+   70%{
+    transform: rotate(360deg);
+    
+   }
+   71%{
+    visibility: hidden;
+   }
+}
